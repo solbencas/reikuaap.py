@@ -1,7 +1,7 @@
 import sqlite3
 from random import randint
 from pprint import pprint
-from flask import Flask, g, render_template, jsonify
+from flask import Flask, g, render_template, jsonify, url_for
 import sys
 
 DATABASE = 'reikuappdb.db'
@@ -25,10 +25,9 @@ def index():
    lugares = query_db('select * from lugares')
    item = lugares[randint(0, len(lugares) - 1)]
    pprint(lugares)
-   return render_template("index.html", item = item)
+   return render_template('index.html', item = item)
 
-@app.route("/json")
-
+@app.route('/json')
 def json_response():
     lugares = query_db('select * from lugares')
 
@@ -44,3 +43,26 @@ def json_response():
          })
 
     return jsonify(lugares_dict)
+
+@app.route('/insertar_score/<nombre>/<score>')
+def score(nombre, score):
+
+    conn = sqlite3.connect(DATABASE)
+    c = conn.cursor()
+
+    item = [nombre, score]
+
+    try:
+        c.execute('insert into score (jugador, puntaje) values (?,?)', item)
+    except sqlite3.IntegrityError as e:
+        return jsonify({"success": False, "message": "Ha ocurrido un error al insertar los datos"})
+
+    conn.commit()
+
+    return jsonify({"success": True, "message": "Se han insertado los datos exitosamente"})
+
+
+@app.route('/getscore')
+def lista_scores ():
+    scores=query_db('select * from score')
+    return jsonify(scores)
