@@ -3,37 +3,69 @@ body {
     margin:0; padding:0;
     font-family: 'Montserrat', sans-serif;
 }
-
-
-#map { position:absolute; top:0; bottom:0; width:100%; }
-
-.mapaDerecha {
-    width: 100%;
+.color1 {
+    background-color: #ea5e48;
 }
-
 nav{
-    position: relative;
     z-index: 1;
 }
-.imgPista{
-    border-radius: 20px 20px 0 0 ;
+ul li a {
+    font-weight: 500;
+}
+
+#map { position:absolute; top:0; bottom:0; width:100%; }
+.mapboxgl-ctrl-top-right {
+    top: 170px;
+    right: 20px;
+    z-index: 50;
 }
 .pistas {
-    position: absolute;
+    position: relative;
     left: 10px;
-    top: 100px;
+    top: 50px;
     width: 250px;
     height: auto;
-    background-color: #fff;
+    min-height: 500px;
     color: #000;
-    font-weight: normal;
+    font-weight:normal;
     font-size: 12px;
     border-radius: 20px;
     box-shadow: 0px 0px 30px silver;
+    z-index: 0;
+    /* display: block; */
 }
-.textoPista {
 
+.logo-animado {
+    width: 100%;
+    height: 200px;
 }
+    .imgInicioPista {
+        position: absolute;
+        z-index: 1;
+        border: 1px solid red;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-weight:400 ;
+        color: #fff;
+        
+    }
+
+        .imgPista{
+            border-radius: 20px 20px 0 0 ;
+        }  
+        .textoPista {
+            letter-spacing: 1px;
+            line-height: 15px;
+            font-weight: 700;
+        }
+    
+    .imgInicioTxt {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
 
 @media (max-width: 575.98px) {
     .pistas {
