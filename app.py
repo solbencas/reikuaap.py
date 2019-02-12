@@ -1,7 +1,7 @@
 import sqlite3
 from random import randint
 from pprint import pprint
-from flask import Flask, g, render_template
+from flask import Flask, g, render_template, jsonify
 import sys
 
 DATABASE = 'reikuappdb.db'
@@ -13,7 +13,7 @@ def get_db():
    if db is None:
        db = g._database = sqlite3.connect(DATABASE)
    return db
- 
+
 def query_db(query, args=(), one=False):
    cur = get_db().execute(query, args)
    rv = cur.fetchall()
@@ -23,6 +23,24 @@ def query_db(query, args=(), one=False):
 @app.route("/")
 def index():
    lugares = query_db('select * from lugares')
-   primer_item = lugares[randint(0, len(lugares) - 1)]
+   item = lugares[randint(0, len(lugares) - 1)]
    pprint(lugares)
-   return render_template("index.html", primer_item = primer_item)
+   return render_template("index.html", item = item)
+
+@app.route("/json")
+
+def json_response():
+    lugares = query_db('select * from lugares')
+
+    lugares_dict = []
+
+    for i in lugares:
+        lugares_dict.append({
+        "titulo": i[1],
+        "latitud": i[2],
+        "longitud": i[3],
+        "imagen": i[4],
+        "descripcion": i[5],
+         })
+
+    return jsonify(lugares_dict)
