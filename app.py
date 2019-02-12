@@ -35,12 +35,14 @@ def json_response():
 
     for i in lugares:
         lugares_dict.append({
-        "titulo": i[1],
-        "latitud": i[2],
-        "longitud": i[3],
-        "imagen": i[4],
-        "descripcion": i[5],
-         })
+            "titulo": i[1],
+            "subtitulo": i[2],
+            "latitud": i[3],
+            "longitud": i[4],
+            "imagen": i[5],
+            "descripcion": i[6],
+            "fuente": i[7],
+        })
 
     return jsonify(lugares_dict)
 
