@@ -67,8 +67,12 @@ $(function(){
 
     function actualizar_jugada() {
         jugada = jugada + 1
+        if (jugada == json_completo.length-1){
+            jugada = 1
+        } 
         $('.top-content').css('background-image', 'url(' + json_completo[jugada - 1].imagen + ')')
         nuestra_coordenada = [json_completo[jugada - 1].latitud, json_completo[jugada - 1].longitud]
+
     }
 
 

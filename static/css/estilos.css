@@ -124,7 +124,7 @@ ul li a, ul li  {
     top: 40px;
     width: 250px;
     height: auto;
-    min-height: 500px;
+    min-height: 450px;
     color: #000;
     font-weight:normal;
     font-size: 12px;
@@ -248,6 +248,11 @@ ul li a, ul li  {
     .fa-linkedin-in:before {
         content: "\f0e1";
     }
+
+    h4.descripcioTeam {
+        line-height: 42px;
+        letter-spacing: 2px;
+    }
     
 
 @media (max-width: 575.98px) {
@@ -260,8 +265,9 @@ ul li a, ul li  {
 
 @media (max-width: 767.98px) {
     .pistas {
-        top: 60px;
+        top: 10px;
         font-size: 12px;
+        min-height: 450px;
     }
     ul.navbar-nav {
         margin: auto;
