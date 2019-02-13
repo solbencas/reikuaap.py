@@ -138,7 +138,6 @@ $(function(){
                     title: "Bien hecho!",
                     text: "Conoces mucho de Paraguay!",
                     icon: "success",
-                    confirmButtonColor: '#ea5e48',
                     button: "Continuar!",
                 });
                 
@@ -149,7 +148,6 @@ $(function(){
                 title: "Lo siento :(",
                 text: "Seguir intentando!",
                 icon: "warning",
-                confirmButtonColor: '#ea5e48', 
                 buttons: true,
                 dangerMode: true,
               })

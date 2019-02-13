@@ -7,7 +7,18 @@ body {
 .color1 {
     background-color: #ea5e48;
 }
-
+.color2 {
+    background-color: #fff;
+}
+.color3 {
+    background-color: #cccccc;
+}
+.text-color{
+    color: #ea5e48;
+}
+.text-color2 {
+    color: #fff;
+}
 nav {
     padding: 24px;
     text-align: center;
@@ -154,6 +165,90 @@ ul li a, ul li  {
         height: 100%;
         display: none;
     }
+    .btn-primary {
+        color: #fff;
+        background-color: #ea5e48;
+        border-color: silver;
+    }
+    .btn-primary:focus {
+        box-shadow: 0 0 0 0.1rem #9E9E9E;
+    }
+    .btn-primary:hover {
+        color: #ea5e48 !important;
+        background-color: #fff !important;
+        border-color: #ea5e48 !important;
+    }
+    .sweet-alert, .lead.text-muted {
+        color: #ea5e48 !important;
+    }
+
+    section {
+        padding: 150px 0; 
+    }
+    section h2.section-heading {
+        font-size: 40px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    section h3.section-subheading {
+        font-size: 16px;
+        font-weight: 400;
+        font-style: italic;
+        margin-bottom: 75px;
+        text-transform: none;
+    }
+    .team-member {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .team-member img {
+        width: 225px;
+        height: 225px;
+        border: 7px solid #fff;
+    }
+    .team-member h4 {
+        margin-top: 25px;
+        margin-bottom: 0;
+        text-transform: none;
+    }
+    .team-member p {
+        margin-top: 0;
+    }
+    ul.social-buttons {
+        margin-bottom: 0;
+    }
+    ul.social-buttons li a {
+        font-size: 20px;
+        line-height: 50px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        color: #fff;
+        border-radius: 100%;
+        outline: 0;
+        background-color: #212529;
+    }
+    .fa, .fab, .fal, .far, .fas {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+    }
+    .fa-twitter:before {
+        content: "\f099";
+    }
+    .fa-facebook-f:before {
+        content: "\f39e";
+    }
+    .fa-linkedin-in:before {
+        content: "\f0e1";
+    }
+    
 
 @media (max-width: 575.98px) {
     .pistas {
