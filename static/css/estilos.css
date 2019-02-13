@@ -3,23 +3,72 @@ body {
     margin:0; padding:0;
     font-family: 'Montserrat', sans-serif;
 }
+
 .color1 {
     background-color: #ea5e48;
 }
-nav{
+
+nav {
+    padding: 24px;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     z-index: 1;
-}
-ul li a {
+  }
+
+ul li a, ul li  {
     font-weight: 500;
+    color: #fff !important;
 }
 
-.img-primero{
+.nav-link {
+    transition: 0.8s;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .nav-link:hover {
+    background-color: #ffffff;
+    padding: 8px 5px;
+    color:#ea5e48 !important;
+    border-radius: 15px;
+  }
+  .img-primero{
     position: absolute;
     width: 100%;
     height: 100%;
     background: #ea5e48;
     border-radius: 20px 20px 20px 20px;
 }
+  
+
+  /*
+  nav {
+    padding: 24px;
+    text-align: center;
+    font-family: Raleway;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    background: #ea5e48;
+  }
+
+  .nav-link {
+    transition: 0.3s ease;
+    background: #ea5e48;
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    border-top: 4px solid #ea5e48;
+    border-bottom: 4px solid #ea5e48;
+    padding: 6px 0;
+    margin: 0 6px;
+  }
+  .nav-link:hover {
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding: 3px 0; 
+  }
+  */
+
+
 
 .marker {
   background-image: url('../img/marker.png');
@@ -61,7 +110,7 @@ ul li a {
 .pistas {
     position: relative;
     left: 10px;
-    top: 50px;
+    top: 40px;
     width: 250px;
     height: auto;
     min-height: 500px;
@@ -119,4 +168,13 @@ ul li a {
         top: 60px;
         font-size: 12px;
     }
+    ul.navbar-nav {
+        margin: auto;
+    }
+    li.nav-item {
+        width: 150px;
+        margin: auto;
+    }
+
+    
  }

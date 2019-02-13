@@ -1,8 +1,11 @@
+
+
 $(function(){
 
     var nuestra_coordenada = null
     var jugada= 1;
     var cantidad_jugadas = null
+    var json_completo = {}
     var geojson= {
         "id": "places",
         "type": "symbol",
@@ -40,12 +43,15 @@ $(function(){
 
         console.log(json)
 
+        json_completo = json
+
         for(var i in json) {
 
             geojson.source.data.features.push({
                 "type": "Feature",
                 "properties": {
-                    "icon": "theatre"
+                    "icon": "theatre",
+                    "title": 'holis'
                 },
                 "geometry": {
                     "type": "Point",
@@ -57,6 +63,12 @@ $(function(){
 
         $('.top-content').css('background-image', 'url(' + json[jugada - 1].imagen + ')')
         nuestra_coordenada = [json[jugada - 1].latitud, json[jugada - 1].longitud]
+    }
+
+    function actualizar_jugada() {
+        jugada = jugada + 1
+        $('.top-content').css('background-image', 'url(' + json_completo[jugada - 1].imagen + ')')
+        nuestra_coordenada = [json_completo[jugada - 1].latitud, json_completo[jugada - 1].longitud]
     }
 
 
@@ -79,6 +91,7 @@ $(function(){
         });
 
         function haversineDistance(coords1, coords2, isMiles) {
+
         		  function toRad(x) {
         		    return x * Math.PI / 180;
         		  }
@@ -119,9 +132,27 @@ $(function(){
             console.log(nuestra_coordenada);
             console.log(distancia);
             if (distancia<45){
-             console.log('GANASTE');
+            console.log('GANASTE');            
+
+                swal({
+                    title: "Bien hecho!",
+                    text: "Conoces mucho de Paraguay!",
+                    icon: "success",
+                    confirmButtonColor: '#ea5e48',
+                    button: "Continuar!",
+                });
+                
+                actualizar_jugada()
            }else {
-             console.log('Perdiste');
+            console.log('Perdiste');
+            swal({
+                title: "Lo siento :(",
+                text: "Seguir intentando!",
+                icon: "warning",
+                confirmButtonColor: '#ea5e48', 
+                buttons: true,
+                dangerMode: true,
+              })
            }
 
 
@@ -134,7 +165,6 @@ $(function(){
 
             new mapboxgl.Popup()
                 .setLngLat(coordinates)
-                .setHTML(description)
                 .addTo(map);
         });
 
@@ -145,9 +175,10 @@ $(function(){
 
         // Change it back to a pointer when it leaves.
         map.on('mouseleave', 'places', function () {
-            map.getCanvas().style.cursor = '';
+                   map.getCanvas().style.cursor = '';
         });
 
     })
 
 })
+

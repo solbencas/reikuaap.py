@@ -8,16 +8,18 @@
 		<meta name="description" content="jugo para encontrar lugare turisticos de Paraguay">
 		<meta name="author" content="Reikuapy" >
 		<meta name="keywords" content="mapas, turismo, ">
-		<link rel="icon" href="{{ url_for('static', filename='img/reikuaap.ico') }}">
+		<link rel="icon" href="{{ url_for('static', filename='img/ico.ico') }}">
 		<title>Reikuaa.py</title>
-		<!-- Google fonts-->
+		<!-- Google fonts-->	
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
 		<!-- Bootstrap  CSS-->
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css">
+		<!-- Sweet alert -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css">
 		<!-- MAPA -->
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/mapa2.css') }}" type="text/css">
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/mapa.css') }}" type="text/css">
-		<!-- Mi CSS -->
+		<!-- estilos CSS  personalizados--> 
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}" type="text/css">
 	</head>
 
@@ -101,9 +103,12 @@
 		<!-- animacion de la primera imagen de bienvenida -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.3/lottie_canvas.js" type="text/javascript"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.3/lottie_html.js"></script>
-
+		<!-- funciones del mapa -->
 		<script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript" ></script>
-
+		<!-- Sweet alert -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js" type="text/javascript" ></script>
+		<!-- scripts personalizados -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/scripts.js" type="text/javascript" ></script>
 		<script>
 			var animation = bodymovin.loadAnimation({
 				container: document.getElementById('lottie'), // Required
