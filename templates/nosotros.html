@@ -1,1 +1,237 @@
-nosotros
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="title" content="Reikuapy">
+		<meta name="description" content="jugo para encontrar lugare turisticos de Paraguay">
+		<meta name="author" content="Reikuapy" >
+		<meta name="keywords" content="mapas, turismo, ">
+		<link rel="icon" href="{{ url_for('static', filename='img/ico.ico') }}">
+    <title>Reikuaa.py</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+		<!-- Google fonts-->	
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
+		<!-- Bootstrap  CSS-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css">
+		<!-- Sweet alert -->
+
+		<!-- estilos CSS  personalizados--> 
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}" type="text/css">
+	</head>
+
+	<body >
+		<!-- Barra de menus-->
+		<nav class="navbar navbar-expand-lg navbar-light color1">
+			<a class="navbar-brand" href="/">
+					<img src="{{ url_for('static', filename='img/reikuaap_logo.png') }}" alt="mapa" class="img-fluid " width="150" height="150">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse text-center " id="navbarNavDropdown">
+			  <ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+				  <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="/nosotros">Nosotros</a>
+				</li>
+				
+			  </ul>
+			</div>
+    </nav><!-- Barra de menus-->
+    
+    <section class="info color2 text-color">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center ">
+            <h4>
+              Reikuaap es una aplicación web que por medio de un juego busca expandir el acceso a la información sobre nuestra ciudad. Pensamos que la mejor forma de aprender es jugando. Con esta herramienta se permite aprender de manera amigable.
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="color3" id="team">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-uppercase">Equipo increible</h2>
+              <h3 class="section-subheading text-muted">descripcion .</h3>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-sm-4">
+                <div class="team-member">
+                  <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='img/XimenaDure.jpg') }}" alt="">
+                  <h4>Ximena Dure</h4>
+                  <p class="text-muted">.....</p>
+                  <ul class="list-inline social-buttons">
+                    <li class="list-inline-item">
+                      <a href="#">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/in/ximena-dure-b8531967/">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+            </div>              
+
+            <div class="col-sm-4">
+              <div class="team-member">
+                <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='img/crltsMrtnz.jpg') }}" alt="">
+                <h4>Carlos Martinez</h4>
+                <p class="text-muted">......</p>
+                <ul class="list-inline social-buttons">
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/crltsmrtnz/">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='img/solBenitez.jpg') }}" alt="">
+              <h4>Sol Benitez</h4>
+              <p class="text-muted">.....</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/sol-bencas-445320157/">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="col-sm-4 offset-sm-2">
+                  <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='img/GiulianaF-Bonilla.jpg') }}" alt="">
+                    <h4>Giuliana Ferreira Bonilla</h4>
+                    <p class="text-muted">.....</p>
+                    <ul class="list-inline social-buttons">
+                      <li class="list-inline-item">
+                        <a href="#">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/in/gmbonilla/">
+                          <i class="fab fa-linkedin-in"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+              </div>                
+              
+
+              <div class="col-sm-5 ">
+                  <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='img/claudiaAvila.jpg') }}" alt="">
+                    <h4>Claudia Avila Schmalko</h4>
+                    <p class="text-muted">.....</p>
+                    <ul class="list-inline social-buttons">
+                      <li class="list-inline-item">
+                        <a href="#">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/in/claudia-avila-66960b150/">
+                          <i class="fab fa-linkedin-in"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+          </div>          
+        </div>
+    </section>
+
+    <section class="color2 p-5"> 
+      <div class="col-sm-12">
+        <div class="row align-items-center">
+            <div class="col-sm-6 mx-auto text-center">
+                <img src="{{ url_for('static', filename='img/pa_logo_horizontal.png') }}" alt="" class="img-fluid">
+              </div>
+              
+              <div class="col-sm-6 mx-auto text-center">                
+                  <img src="{{ url_for('static', filename='img/pengustudying2.gif') }}" alt="" class="img-fluid">              
+                </div>
+            </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small color3 text-color2 pt-4 text-center">
+
+        <!-- Footer Elements -->
+        <div class="container">          
+          <h5 class="mb-1">Esta pagina fue desarrollada por un team que participó del BootCamp 2019 organizado por Penguin Academy en Paraguay.</h5>           
+        </div>
+        <!-- Footer Elements -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-color">(GNU) General Public License.</div>
+        <!-- Copyright -->
+
+      </footer>
+      <!-- Footer -->
+
+
+		<script src="{{ url_for('static', filename='js/jquery.js') }}" type="text/javascript" ></script>
+		<script src="{{ url_for('static', filename='js/popper.min.js') }}" type="text/javascript" ></script>
+		<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" type="text/javascript" ></script>
+	</body>
+</html>
