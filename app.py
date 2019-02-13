@@ -27,6 +27,11 @@ def index():
    pprint(lugares)
    return render_template('index.html', item = item)
 
+
+@app.route("/nosotros")
+def nosotros():
+   return render_template('nosotros.html')
+
 @app.route('/json')
 def json_response():
     lugares = query_db('select * from lugares')
